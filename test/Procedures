@@ -1,0 +1,18 @@
+CREATE PROCEDURE ShowRawScores(IN ssn VARCHAR(4)) BEGIN SELECT * FROM Rawscores r WHERE r.SSN = ssn; END 
+
+CREATE PROCEDURE ShowPercentages(ssn VARCHAR(4))
+BEGIN
+SELECT
+	score.FName First_Name,
+    score.LName Last_Name,
+	(score.HW1*wtpt.HW1 + 
+    score.HW2a*wtpt.HW2a +
+    score.HW2b*wtpt.HW2b +
+    score.Midterm * wtpt.Midterm + 
+    score.HW3 * wtpt.HW3 +
+    score.FExam * wtpt.FExam) CumAvg
+FROM Rawscores AS score, WtdPts as wtpt WHERE score.SSN=ssn;
+END
+//
+
+CREATE VIEW WtdPts AS SELECT (1/t.HW1)*w.HW1 HW1,(1/t.HW2a)*w.HW2 HW2a,(1/t.HW2b)*w.HW2b HW2b,(1/t.Midterm)*w.Midterm Midterm,(1/t.HW3)*w.HW3 HW3,(1/t.FExam)*w.FExam FExam FROM TotalPoints t, Weights w; 

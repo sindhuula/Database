@@ -72,7 +72,7 @@
             echo "<th>Final Exams</th>";
             echo "</tr>";
 
-	if ($link->multi_query("CALL ShowRawScores('".$_POST["SSN"]."');")) 
+	if ($link->multi_query("CALL test_select('".$_POST["SSN"]."');")) 
 	{ 
 	do 
 		{ /* store first result set */ 
