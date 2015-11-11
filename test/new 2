@@ -1,0 +1,47 @@
+
+	else
+	{
+	    echo "<table>";
+			echo "<tr>";
+			echo "<th>SSN</th>";
+            echo "<th>First Name</th>";
+            echo "<th>Last Name</th>";
+            echo "<th>Section</th>";
+            echo "<th>Homework 1</th>";
+            echo "<th>Homework 2a</th>";
+            echo "<th>Homework 2b</th>";
+            echo "<th>Midterm</th>";
+            echo "<th>Homework 3</th>";
+            echo "<th>Final Exams</th>";
+            echo "</tr>";
+
+	if ($link->multi_query("CALL test_select('".$_POST["SSN"]."');")) 
+	{ 
+	do 
+		{ /* store first result set */ 
+			if ($result = $link->store_result()) 
+				{ while ($row = $result->fetch_row())
+						{ 	                echo "<tr>";
+
+                    echo "<td>" . $row[0] . "</td>";
+                    echo "<td>" . $row[1] . "</td>";
+                    echo "<td>" . $row[2] . "</td>";
+                    echo "<td>" . $row[3] . "</td>";
+                    echo "<td>" . $row[4] . "</td>";
+                    echo "<td>" . $row[5] . "</td>";
+                    echo "<td>" . $row[6] . "</td>";
+                    echo "<td>" . $row[7] . "</td>";
+                    echo "<td>" . $row[8] . "</td>";
+                    echo "<td>" . $row[9] . "</td>";
+					echo "</tr>";
+						}
+						$result->close(); }
+						/* print divider */ 
+				if ($link->more_results()) { printf("-----------------<br>"); }
+				} 
+				while ($link->next_result()); 
+	} 
+	else { printf("First Error: %s\n", $link->error); }  
+	mysqli_close($link);
+	echo "</table>";
+	}
