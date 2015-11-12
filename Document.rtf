@@ -35,8 +35,8 @@
 {\*\cs10 \additive \ssemihidden \sunhideused \spriority1 Default Paragraph Font;}{\*
 \ts11\tsrowd\trftsWidthB3\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\trcbpat1\trcfpat1\tblind0\tblindtype3\tsvertalt\tsbrdrt\tsbrdrl\tsbrdrb\tsbrdrr\tsbrdrdgl\tsbrdrdgr\tsbrdrh\tsbrdrv \ql \li0\ri0\sa200\sl276\slmult1
 \widctlpar\wrapdefault\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \rtlch\fcs1 \af0\afs22\alang1025 \ltrch\fcs0 \fs22\lang1033\langfe1033\loch\f31506\hich\af31506\dbch\af31505\cgrid\langnp1033\langfenp1033 \snext11 \ssemihidden \sunhideused 
-Normal Table;}}{\*\rsidtbl \rsid360202\rsid2118860\rsid6833142\rsid7619731}{\mmathPr\mmathFont34\mbrkBin0\mbrkBinSub0\msmallFrac0\mdispDef1\mlMargin0\mrMargin0\mdefJc1\mwrapIndent1440\mintLim0\mnaryLim1}{\info{\operator Sindhuula}
-{\creatim\yr2015\mo11\dy11\hr12\min2}{\revtim\yr2015\mo11\dy11\hr21\min24}{\version5}{\edmins425}{\nofpages9}{\nofwords947}{\nofchars5402}{\nofcharsws6337}{\vern57439}}{\*\xmlnstbl {\xmlns1 http://schemas.microsoft.com/office/word/2003/wordml}}
+Normal Table;}}{\*\rsidtbl \rsid360202\rsid2118860\rsid3953327\rsid6833142\rsid7619731\rsid13530827}{\mmathPr\mmathFont34\mbrkBin0\mbrkBinSub0\msmallFrac0\mdispDef1\mlMargin0\mrMargin0\mdefJc1\mwrapIndent1440\mintLim0\mnaryLim1}{\info{\operator Sindhuula}
+{\creatim\yr2015\mo11\dy11\hr12\min2}{\revtim\yr2015\mo11\dy12\hr14\min49}{\version6}{\edmins503}{\nofpages17}{\nofwords2203}{\nofchars12563}{\nofcharsws14737}{\vern57439}}{\*\xmlnstbl {\xmlns1 http://schemas.microsoft.com/office/word/2003/wordml}}
 \paperw12240\paperh15840\margl1440\margr1440\margt1440\margb1440\gutter0\ltrsect 
 \widowctrl\ftnbj\aenddoc\trackmoves0\trackformatting1\donotembedsysfont0\relyonvml0\donotembedlingdata1\grfdocevents0\validatexml0\showplaceholdtext0\ignoremixedcontent0\saveinvalidxml0\showxmlerrors0\horzdoc\dghspace120\dgvspace120\dghorigin1701
 \dgvorigin1984\dghshow0\dgvshow3\jcompress\viewkind1\viewscale100\splytwnine\ftnlytwnine\htmautsp\useltbaln\alntblind\lytcalctblwd\lyttblrtgr\lnbrkrule\nobrkwrptbl\snaptogridincell\allowfieldendsel\wrppunct\asianbrkrule\rsidroot2118860
@@ -207,19 +207,22 @@ CREATE PROCEDURE AllRawScores(IN pass VARCHAR(20),
 CREATE PROCEDURE AllP}{\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\langnp9\insrsid6833142 \hich\af37\dbch\af31505\loch\f37 ercentages}{\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\langnp9\insrsid6833142\charrsid6833142 
 \hich\af37\dbch\af31505\loch\f37 (IN passwords VARC}{\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\langnp9\insrsid6833142 \hich\af37\dbch\af31505\loch\f37 HAR(11)}{\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\langnp9\insrsid360202 
 \hich\af37\dbch\af31505\loch\f37 )}{\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\langnp9\insrsid6833142\charrsid6833142 
-\par }\pard \ltrpar\ql \li0\ri0\sa200\sl276\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid360202 {\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\langnp9\insrsid360202\charrsid360202 \hich\af37\dbch\af31505\loch\f37 BEGIN
+\par }\pard \ltrpar\ql \li0\ri0\sa200\sl276\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid13530827 {\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\langnp9\insrsid13530827\charrsid13530827 \hich\af37\dbch\af31505\loch\f37 BEGIN
 \par \hich\af37\dbch\af31505\loch\f37   
 \par \hich\af37\dbch\af31505\loch\f37   DECLARE number INT DEFAULT 0;
-\par \hich\af37\dbch\af31505\loch\f37   DECLARE checking CURSOR FOR
+\par \hich\af37\dbch\af31505\loch\f37   DECLARE counting INT DEFAULT 0;
+\par \hich\af37\dbch\af31505\loch\f37   DECLARE checking CURSO\hich\af37\dbch\af31505\loch\f37 R FOR
 \par \hich\af37\dbch\af31505\loch\f37   \tab SELECT 1 FROM
 \par \hich\af37\dbch\af31505\loch\f37     (SELECT CurPasswords, 'Access Granted' result FROM passwords
-\par \tab \hich\af37\dbch\af31505\loch\f37   WHERE C\hich\af37\dbch\af31505\loch\f37 urPasswords = passwords) AS temp;
+\par \tab \hich\af37\dbch\af31505\loch\f37   WHERE CurPasswords = passwords) AS temp;
 \par \hich\af37\dbch\af31505\loch\f37   DECLARE EXIT HANDLER FOR NOT FOUND
 \par \hich\af37\dbch\af31505\loch\f37     SELECT 'Sorry; this PASSWORD was not found' AS 'Error Message';
 \par \hich\af37\dbch\af31505\loch\f37   SET number = 0; 
+\par \hich\af37\dbch\af31505\loch\f37   SET counting = 0;
 \par \hich\af37\dbch\af31505\loch\f37   OPEN checking;
 \par \hich\af37\dbch\af31505\loch\f37   FETCH checking INTO number;
-\par \hich\af37\dbch\af31505\loch\f37   IF (number = 1) THEN  
+\par \hich\af37\dbch\af31505\loch\f37   SELECT COUNT(*)-2 FROM RawScores INTO counting;
+\par \hich\af37\dbch\af31505\loch\f37   IF (number = 1 && counting > 0) THEN  
 \par \hich\af37\dbch\af31505\loch\f37   \tab \tab SELECT score.SSN ssn,
 \par \tab \hich\af37\dbch\af31505\loch\f37  \tab score.FName FName,
 \par \hich\af37\dbch\af31505\loch\f37     \tab score.LName LName,
@@ -228,7 +231,7 @@ CREATE PROCEDURE AllP}{\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\lang
 \par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2a/totpts.HW2a*100 HW2a,
 \par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2b/totpts.HW2b*100 HW2b,
 \par \hich\af37\dbch\af31505\loch\f37     \tab score.Midterm/totpts.Midterm*100 Midterm,
-\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW3/totpts.HW\hich\af37\dbch\af31505\loch\f37 3*100 HW3,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW3/totpts.HW3*100 HW3,
 \par \hich\af37\dbch\af31505\loch\f37     \tab score.FExam/totpts.FExam*100 FExam,
 \par \hich\af37\dbch\af31505\loch\f37         (score.HW1*wtpt.HW1+
 \par \tab \hich\af37\dbch\af31505\loch\f37     score.HW2a*wtpt.HW2a+
@@ -236,21 +239,225 @@ CREATE PROCEDURE AllP}{\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\lang
 \par \hich\af37\dbch\af31505\loch\f37      \tab score.Midterm*wtpt.Midterm+
 \par \hich\af37\dbch\af31505\loch\f37      \tab score.HW3*wtpt.HW3+
 \par \hich\af37\dbch\af31505\loch\f37      \tab score.FExam*wtpt.FExam) wtavg,
-\par \hich\af37\dbch\af31505\loch\f37         CONCAT ('The cu\hich\af37\dbch\af31505\loch\f37 mulative course average for ',score.FName,' ',score.LName,' is ',(score.HW1*wtpt.HW1+
+\par \hich\af37\dbch\af31505\loch\f37         CONCAT ('The cumulative course average for ',score.FName,' ',score.\hich\af37\dbch\af31505\loch\f37 LName,' is ',(score.HW1*wtpt.HW1+
 \par \tab \hich\af37\dbch\af31505\loch\f37     score.HW2a*wtpt.HW2a+
 \par \hich\af37\dbch\af31505\loch\f37      \tab score.HW2b*wtpt.HW2b+
 \par \hich\af37\dbch\af31505\loch\f37      \tab score.Midterm*wtpt.Midterm+
 \par \hich\af37\dbch\af31505\loch\f37      \tab score.HW3*wtpt.HW3+
 \par \hich\af37\dbch\af31505\loch\f37      \tab score.FExam*wtpt.FExam)) AS result
-\par \hich\af37\dbch\af31505\loch\f37         FROM R\hich\af37\dbch\af31505\loch\f37 awScores score, TotalPoints totpts, WtdPts wtpt
-\par \tab \tab \hich\af37\dbch\af31505\loch\f37 WHERE (score.SSN <> '0001' AND score.SSN <>'0002') 
+\par \hich\af37\dbch\af31505\loch\f37         FROM RawScores score, TotalPoints totpts, WtdPts wtpt
+\par \tab \tab \hich\af37\dbch\af31505\loch\f37 WH\hich\af37\dbch\af31505\loch\f37 ERE (score.SSN <> '0001' AND score.SSN <>'0002') 
 \par \hich\af37\dbch\af31505\loch\f37         ORDER BY score.Section ASC, wtavg DESC;\tab 
 \par \tab \hich\af37\dbch\af31505\loch\f37 ELSE
-\par \hich\af37\dbch\af31505\loch\f37     \tab SELECT 'Nothing here for you.';
+\par \hich\af37\dbch\af31505\loch\f37     \tab SELECT 'Nothing here for you.' AS 'Error Message';
 \par \hich\af37\dbch\af31505\loch\f37     END IF;
 \par \hich\af37\dbch\af31505\loch\f37     CLOSE checking;
 \par \hich\af37\dbch\af31505\loch\f37   
 \par \hich\af37\dbch\af31505\loch\f37 END}{\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\langnp9\insrsid7619731 
+\par }{\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\langnp9\insrsid3953327 
+\par \hich\af37\dbch\af31505\loch\f37 5. 
+\par }\pard \ltrpar\ql \li0\ri0\sa200\sl276\slmult1\nowidctlpar\wrapdefault\faauto\rin0\lin0\itap0\pararsid3953327 {\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\langnp9\insrsid3953327\charrsid3953327 \hich\af37\dbch\af31505\loch\f37 
+CREATE PROCEDURE Stats(IN passwords VARCHAR(11))
+\par \hich\af37\dbch\af31505\loch\f37 BEGIN
+\par \hich\af37\dbch\af31505\loch\f37   
+\par \hich\af37\dbch\af31505\loch\f37   DECLARE number INT DEFAULT 0;
+\par \hich\af37\dbch\af31505\loch\f37   DECLARE counting INT DEFAULT 0;
+\par \hich\af37\dbch\af31505\loch\f37   DECLARE checking CURSOR FOR
+\par \hich\af37\dbch\af31505\loch\f37   \tab SELECT 1 FROM
+\par \hich\af37\dbch\af31505\loch\f37     (SELECT CurPasswords, 'Access Granted' result FROM passwords
+\par \tab \hich\af37\dbch\af31505\loch\f37   WHERE CurPasswords = passwords) AS temp;
+\par \hich\af37\dbch\af31505\loch\f37   DECLARE EXIT HANDLER FOR NOT FOUND
+\par \hich\af37\dbch\af31505\loch\f37     SELECT 'Sorry; this PASSWORD was not found' AS 'Error Message';
+\par \hich\af37\dbch\af31505\loch\f37   SET number = 0; 
+\par \hich\af37\dbch\af31505\loch\f37   SET counting = 0;
+\par \hich\af37\dbch\af31505\loch\f37   OPEN checking;
+\par \hich\af37\dbch\af31505\loch\f37   FETCH checking INTO number;
+\par \hich\af37\dbch\af31505\loch\f37   SELECT COUNT(*)-2 FROM RawScores INTO counting;
+\par \hich\af37\dbch\af31505\loch\f37   IF (number = \hich\af37\dbch\af31505\loch\f37 1 && counting > 0) THEN  
+\par \hich\af37\dbch\af31505\loch\f37   \tab \tab SELECT score.SSN ssn,
+\par \tab \hich\af37\dbch\af31505\loch\f37  \tab score.FName FName,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.LName LName,
+\par \hich\af37\dbch\af31505\loch\f37    \tab \tab score.Section Section,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW1/totpts.HW1*100 HW1,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2a/totpts.HW2a*100 HW2a,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2b/totpts.HW2b*100 HW2b,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.Midterm/\hich\af37\dbch\af31505\loch\f37 totpts.Midterm*100 Midterm,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW3/totpts.HW3*100 HW3,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.FExam/totpts.FExam*100 FExam,
+\par \hich\af37\dbch\af31505\loch\f37         (score.HW1*wtpt.HW1+
+\par \tab \hich\af37\dbch\af31505\loch\f37     score.HW2a*wtpt.HW2a+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW2b*wtpt.HW2b+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.Midterm*wtpt.Midterm+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW3*wtpt.HW3+
+\par \hich\af37\dbch\af31505\loch\f37      \tab sc\hich\af37\dbch\af31505\loch\f37 ore.FExam*wtpt.FExam) wtavg,
+\par \hich\af37\dbch\af31505\loch\f37         CONCAT ('The cumulative course average for ',score.FName,' ',score.LName,' is ',(score.HW1*wtpt.HW1+
+\par \tab \hich\af37\dbch\af31505\loch\f37     score.HW2a*wtpt.HW2a+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW2b*wtpt.HW2b+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.Midterm*wtpt.Midterm+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW3*wtpt.HW3+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.FExam*wtpt.FExam)) AS result
+\par \hich\af37\dbch\af31505\loch\f37         FROM RawScores score, TotalPoints totpts, WtdPts wtpt
+\par \tab \tab \hich\af37\dbch\af31505\loch\f37 WHERE (score.SSN <> '0001' AND score.SSN <>'0002') 
+\par \hich\af37\dbch\af31505\loch\f37         ORDER BY score.Section ASC, wtavg DESC;\tab 
+\par \tab \hich\af37\dbch\af31505\loch\f37 SELECT 'Mean Scores' Mean_Score,res.Section,AVG(r\hich\af37\dbch\af31505\loch\f37 es.HW1) HW1, AVG(res.HW2a) HW2a,AVG(res.HW2b) HW2b, AVG(res.Midterm) Midterm,   
+\par \hich\af37\dbch\af31505\loch\f37     AVG(res.HW3) HW3, AVG(res.FExam) FExam, AVG(res.CumAVG) CumulativeMean FROM
+\par \hich\af37\dbch\af31505\loch\f37     (
+\par \hich\af37\dbch\af31505\loch\f37      \tab \tab SELECT score.Section Section,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW1/totpts.HW1*100 HW1,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2a/t\hich\af37\dbch\af31505\loch\f37 otpts.HW2a*100 HW2a,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2b/totpts.HW2b*100 HW2b,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.Midterm/totpts.Midterm*100 Midterm,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW3/totpts.HW3*100 HW3,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.FExam/totpts.FExam*100 FExam,
+\par \hich\af37\dbch\af31505\loch\f37         (score.HW1*wtpt.HW1+
+\par \tab \hich\af37\dbch\af31505\loch\f37     score.HW2a*wtpt.HW2a+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW2b*w\hich\af37\dbch\af31505\loch\f37 tpt.HW2b+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.Midterm*wtpt.Midterm+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW3*wtpt.HW3+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.FExam*wtpt.FExam) CumAVG
+\par \hich\af37\dbch\af31505\loch\f37         FROM RawScores score, TotalPoints totpts, WtdPts wtpt
+\par \tab \tab \hich\af37\dbch\af31505\loch\f37 WHERE (score.SSN <> '0001' AND score.SSN <>'0002' AND score.Section = '315')  
+\par \hich\af37\dbch\af31505\loch\f37     ) \hich\af37\dbch\af31505\loch\f37 AS res;
+\par \tab \hich\af37\dbch\af31505\loch\f37 SELECT 'Mean Scores' Mean_Score,res.Section,AVG(res.HW1) HW1, AVG(res.HW2a) HW2a,AVG(res.HW2b) HW2b, AVG(res.Midterm) Midterm,   
+\par \hich\af37\dbch\af31505\loch\f37     AVG(res.HW3) HW3, AVG(res.FExam) FExam, AVG(res.CumAVG) CumulativeMean FROM
+\par \hich\af37\dbch\af31505\loch\f37     (
+\par \hich\af37\dbch\af31505\loch\f37      \tab \tab SELECT score.Section Sec\hich\af37\dbch\af31505\loch\f37 tion,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW1/totpts.HW1*100 HW1,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2a/totpts.HW2a*100 HW2a,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2b/totpts.HW2b*100 HW2b,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.Midterm/totpts.Midterm*100 Midterm,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW3/totpts.HW3*100 HW3,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.FExam/totpts.FExam*100 FExam,
+\par \hich\af37\dbch\af31505\loch\f37         (score.HW1*wtpt.HW1+
+\par \tab \hich\af37\dbch\af31505\loch\f37     score.HW2a*wtpt.HW2a+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW2b*wtpt.HW2b+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.Midterm*wtpt.Midterm+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW3*wtpt.HW3+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.FExam*wtpt.FExam) CumAVG
+\par \hich\af37\dbch\af31505\loch\f37         FROM RawScores score, TotalPoints totpts, WtdPts wtpt
+\par \tab \tab \hich\af37\dbch\af31505\loch\f37 WHERE (scor\hich\af37\dbch\af31505\loch\f37 e.SSN <> '0001' AND score.SSN <>'0002' AND score.Section = '415')  
+\par \hich\af37\dbch\af31505\loch\f37     ) AS res;
+\par \tab \tab \hich\af37\dbch\af31505\loch\f37 SELECT 'Minimum Scores' Minimum_Score,res.Section,MIN(res.HW1) HW1, MIN(res.HW2a) HW2a,MIN(res.HW2b) HW2b, MIN(res.Midterm) Midterm,   
+\par \hich\af37\dbch\af31505\loch\f37     MIN(res.HW3) HW3, MIN(res.FExam)\hich\af37\dbch\af31505\loch\f37  FExam, MIN(res.CumMIN) CumulativeMinimum FROM
+\par \hich\af37\dbch\af31505\loch\f37     (
+\par \hich\af37\dbch\af31505\loch\f37      \tab \tab SELECT score.Section Section,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW1/totpts.HW1*100 HW1,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2a/totpts.HW2a*100 HW2a,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2b/totpts.HW2b*100 HW2b,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.Midterm/totpts.Midterm*100 Midterm,
+\par \hich\af37\dbch\af31505\loch\f37     \tab sco\hich\af37\dbch\af31505\loch\f37 re.HW3/totpts.HW3*100 HW3,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.FExam/totpts.FExam*100 FExam,
+\par \hich\af37\dbch\af31505\loch\f37         (score.HW1*wtpt.HW1+
+\par \tab \hich\af37\dbch\af31505\loch\f37     score.HW2a*wtpt.HW2a+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW2b*wtpt.HW2b+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.Midterm*wtpt.Midterm+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW3*wtpt.HW3+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.FExam*wtpt.FExam) CumMIN
+\par \hich\af37\dbch\af31505\loch\f37         FROM RawScores score, TotalPoints totpts, WtdPts wtpt
+\par \tab \tab \hich\af37\dbch\af31505\loch\f37 WHERE (score.SSN <> '0001' AND score.SSN <>'0002' AND score.Section = '315')  
+\par \hich\af37\dbch\af31505\loch\f37     ) AS res;
+\par \tab \hich\af37\dbch\af31505\loch\f37 SELECT 'Minimum Scores' Minimum_Score,res.Section,MIN(res.HW1) HW1, MIN(res.HW2a) HW2a,MIN(res.HW2\hich\af37\dbch\af31505\loch\f37 b) HW2b, MIN(res.Midterm) Midterm,   
+\par \hich\af37\dbch\af31505\loch\f37     MIN(res.HW3) HW3, MIN(res.FExam) FExam, MIN(res.CumMIN) CumulativeMinimum FROM
+\par \hich\af37\dbch\af31505\loch\f37     (
+\par \hich\af37\dbch\af31505\loch\f37      \tab \tab SELECT score.Section Section,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW1/totpts.HW1*100 HW1,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2a/totpts.HW2a*100 HW2a,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2b/tot\hich\af37\dbch\af31505\loch\f37 pts.HW2b*100 HW2b,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.Midterm/totpts.Midterm*100 Midterm,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW3/totpts.HW3*100 HW3,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.FExam/totpts.FExam*100 FExam,
+\par \hich\af37\dbch\af31505\loch\f37         (score.HW1*wtpt.HW1+
+\par \tab \hich\af37\dbch\af31505\loch\f37     score.HW2a*wtpt.HW2a+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW2b*wtpt.HW2b+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.Midterm*wtpt.Midte\hich\af37\dbch\af31505\loch\f37 rm+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW3*wtpt.HW3+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.FExam*wtpt.FExam) CumMIN
+\par \hich\af37\dbch\af31505\loch\f37         FROM RawScores score, TotalPoints totpts, WtdPts wtpt
+\par \tab \tab \hich\af37\dbch\af31505\loch\f37 WHERE (score.SSN <> '0001' AND score.SSN <>'0002' AND score.Section = '415')  
+\par \hich\af37\dbch\af31505\loch\f37     ) AS res;
+\par \tab \hich\af37\dbch\af31505\loch\f37 SELECT 'Maximum Scores'  Maximu\hich\af37\dbch\af31505\loch\f37 m_Score,res.Section,MAX(res.HW1) HW1, MAX(res.HW2a) HW2a,MAX(res.HW2b) HW2b, MAX(res.Midterm) Midterm,   
+\par \hich\af37\dbch\af31505\loch\f37     MAX(res.HW3) HW3, MAX(res.FExam) FExam, MAX(res.CumMAX) CumulativeMaximum FROM
+\par \hich\af37\dbch\af31505\loch\f37     (
+\par \hich\af37\dbch\af31505\loch\f37      \tab \tab SELECT score.Section Section,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW1/totpts.HW\hich\af37\dbch\af31505\loch\f37 1*100 HW1,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2a/totpts.HW2a*100 HW2a,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2b/totpts.HW2b*100 HW2b,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.Midterm/totpts.Midterm*100 Midterm,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW3/totpts.HW3*100 HW3,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.FExam/totpts.FExam*100 FExam,
+\par \hich\af37\dbch\af31505\loch\f37         (score.HW1*wtpt.HW1+
+\par \tab \hich\af37\dbch\af31505\loch\f37     score.HW2a*wtpt.HW2a+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW2b*wtpt.HW2b+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.Midterm*wtpt.Midterm+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW3*wtpt.HW3+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.FExam*wtpt.FExam) CumMAX
+\par \hich\af37\dbch\af31505\loch\f37         FROM RawScores score, TotalPoints totpts, WtdPts wtpt
+\par \tab \tab \hich\af37\dbch\af31505\loch\f37 WHERE (score.SSN <> '0001' AND score.SSN\hich\af37\dbch\af31505\loch\f37  <>'0002' AND score.Section = '315')  
+\par \hich\af37\dbch\af31505\loch\f37     ) AS res;
+\par \tab \hich\af37\dbch\af31505\loch\f37 SELECT 'Maximum Scores'  Maximum_Score,res.Section,MAX(res.HW1) HW1, MAX(res.HW2a) HW2a,MAX(res.HW2b) HW2b, MAX(res.Midterm) Midterm,   
+\par \hich\af37\dbch\af31505\loch\f37     MAX(res.HW3) HW3, MAX(res.FExam) FExam, MAX(res.CumMAX) Cumul\hich\af37\dbch\af31505\loch\f37 ativeMaximum FROM
+\par \hich\af37\dbch\af31505\loch\f37     (
+\par \hich\af37\dbch\af31505\loch\f37      \tab \tab SELECT score.Section Section,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW1/totpts.HW1*100 HW1,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2a/totpts.HW2a*100 HW2a,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2b/totpts.HW2b*100 HW2b,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.Midterm/totpts.Midterm*100 Midterm,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW3/totpts.HW3*100 HW3,
+\par \hich\af37\dbch\af31505\loch\f37   \hich\af37\dbch\af31505\loch\f37   \tab score.FExam/totpts.FExam*100 FExam,
+\par \hich\af37\dbch\af31505\loch\f37         (score.HW1*wtpt.HW1+
+\par \tab \hich\af37\dbch\af31505\loch\f37     score.HW2a*wtpt.HW2a+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW2b*wtpt.HW2b+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.Midterm*wtpt.Midterm+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW3*wtpt.HW3+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.FExam*wtpt.FExam) CumMAX
+\par \hich\af37\dbch\af31505\loch\f37         FROM RawScores score, TotalP\hich\af37\dbch\af31505\loch\f37 oints totpts, WtdPts wtpt
+\par \tab \tab \hich\af37\dbch\af31505\loch\f37 WHERE (score.SSN <> '0001' AND score.SSN <>'0002' AND score.Section = '415')  
+\par \hich\af37\dbch\af31505\loch\f37     ) AS res;
+\par \tab \hich\af37\dbch\af31505\loch\f37 SELECT 'STDDEV Scores'  STDDEV_Score,res.Section,STD(res.HW1) HW1, STD(res.HW2a) HW2a,STD(res.HW2b) HW2b, STD(res.Midterm) Midterm,   
+\par \hich\af37\dbch\af31505\loch\f37     STD(res.HW3) HW3, STD(res.FExam) FExam, STD(res.CumSTD) CumulativeSTDDEV FROM
+\par \hich\af37\dbch\af31505\loch\f37     (
+\par \hich\af37\dbch\af31505\loch\f37      \tab \tab SELECT score.Section Sect\hich\af37\dbch\af31505\loch\f37 ion,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW1/totpts.HW1*100 HW1,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2a/totpts.HW2a*100 HW2a,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2b/totpts.HW2b*100 HW2b,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.Midterm/totpts.Midterm*100 Midterm,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW3/totpts.HW3*100 HW3,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.FExam/totpts.FExam*100 FExam,
+\par \hich\af37\dbch\af31505\loch\f37         (score.HW\hich\af37\dbch\af31505\loch\f37 1*wtpt.HW1+
+\par \tab \hich\af37\dbch\af31505\loch\f37     score.HW2a*wtpt.HW2a+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW2b*wtpt.HW2b+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.Midterm*wtpt.Midterm+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW3*wtpt.HW3+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.FExam*wtpt.FExam) CumSTD
+\par \hich\af37\dbch\af31505\loch\f37         FROM RawScores score, TotalPoints totpts, WtdPts wtpt
+\par \tab \tab \hich\af37\dbch\af31505\loch\f37 WHERE (score.SSN <> '0001' A\hich\af37\dbch\af31505\loch\f37 ND score.SSN <>'0002' AND score.Section = '315')  
+\par \hich\af37\dbch\af31505\loch\f37     ) AS res;
+\par \tab \hich\af37\dbch\af31505\loch\f37 SELECT 'STDDEV Scores'  STDDEV_Score,res.Section,STD(res.HW1) HW1, STD(res.HW2a) HW2a,STD(res.HW2b) HW2b, STD(res.Midterm) Midterm,   
+\par \hich\af37\dbch\af31505\loch\f37     STD(res.HW3) HW3, STD(res.FExam) FExam, STD(res.Cum\hich\af37\dbch\af31505\loch\f37 STD) CumulativeSTDDEV FROM
+\par \hich\af37\dbch\af31505\loch\f37     (
+\par \hich\af37\dbch\af31505\loch\f37      \tab \tab SELECT score.Section Section,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW1/totpts.HW1*100 HW1,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2a/totpts.HW2a*100 HW2a,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW2b/totpts.HW2b*100 HW2b,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.Midterm/totpts.Midterm*100 Midterm,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.HW3/totpts.HW3*100 HW3,
+\par \hich\af37\dbch\af31505\loch\f37     \tab score.FExam/totpts.FExam*100 FExam,
+\par \hich\af37\dbch\af31505\loch\f37         (score.HW1*wtpt.HW1+
+\par \tab \hich\af37\dbch\af31505\loch\f37     score.HW2a*wtpt.HW2a+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW2b*wtpt.HW2b+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.Midterm*wtpt.Midterm+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.HW3*wtpt.HW3+
+\par \hich\af37\dbch\af31505\loch\f37      \tab score.FExam*wtpt.FExam) CumSTD
+\par \hich\af37\dbch\af31505\loch\f37         FROM RawScores score, TotalPoints totpts, WtdPts wtpt
+\par \tab \tab \hich\af37\dbch\af31505\loch\f37 WHERE (score.SSN <> '0001' AND score.SSN <>'0002' AND score.Section = '415')  
+\par \hich\af37\dbch\af31505\loch\f37     ) AS res;
+\par 
+\par \hich\af37\dbch\af31505\loch\f37     ELSE
+\par \hich\af37\dbch\af31505\loch\f37     \tab SELECT 'Nothing here for you.' AS 'Error Message';
+\par \hich\af37\dbch\af31505\loch\f37     END IF;
+\par \hich\af37\dbch\af31505\loch\f37     CLOSE checking;
+\par \hich\af37\dbch\af31505\loch\f37   
+\par \hich\af37\dbch\af31505\loch\f37 END}{\rtlch\fcs1 \af37 \ltrch\fcs0 \f37\lang9\langfe16393\langnp9\insrsid3953327 
 \par }{\*\themedata 504b030414000600080000002100e9de0fbfff0000001c020000130000005b436f6e74656e745f54797065735d2e786d6cac91cb4ec3301045f748fc83e52d4a
 9cb2400825e982c78ec7a27cc0c8992416c9d8b2a755fbf74cd25442a820166c2cd933f79e3be372bd1f07b5c3989ca74aaff2422b24eb1b475da5df374fd9ad
 5689811a183c61a50f98f4babebc2837878049899a52a57be670674cb23d8e90721f90a4d2fa3802cb35762680fd800ecd7551dc18eb899138e3c943d7e503b6
@@ -369,8 +576,8 @@ fffffffffffffffffdfffffffeffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-ffffffffffffffffffffffffffffffff52006f006f007400200045006e00740072007900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016000500ffffffffffffffffffffffff0c6ad98892f1d411a65f0040963251e5000000000000000000000000c0ba
-cb50f11cd101feffffff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff00000000000000000000000000000000000000000000000000000000
+ffffffffffffffffffffffffffffffff52006f006f007400200045006e00740072007900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016000500ffffffffffffffffffffffff0c6ad98892f1d411a65f0040963251e50000000000000000000000004016
+a743831dd101feffffff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff00000000000000000000000000000000000000000000000000000000
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000
 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffff000000000000000000000000000000000000000000000000
 0000000000000000000000000000000000000000000000000105000000000000}}
