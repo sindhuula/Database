@@ -1,0 +1,31 @@
+    <!DOCTYPE html>
+
+    <html lang="en">
+
+    <head>
+
+        <title>Query (g) to change Midterm scores for student</title>
+
+    </head>
+
+    <body>
+
+   
+
+    <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+	Password:<br>
+	<input type="password" name="password" size="15" maxlength="15" <?php echo isset($_POST['password']) ? $_POST['password'] : '' ?>>
+	<br>
+    SSN:<br>
+	<input type="text" name="SSN" size="15" maxlength="4" <?php echo isset($_POST['SSN']) ? $_POST['SSN'] : '' ?>>
+	<br>
+	<br>
+	New Score:<br>
+	<input type="text" name="NewScore" size="15" <?php echo isset($_POST['NewScore']) ? $_POST['NewScore'] : '' ?>>
+	<br>
+	
+	<br>
+	<input type="submit" value="Get Value" name="submit">
+    </form>
+</body>
+</html>
