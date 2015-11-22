@@ -35,21 +35,22 @@ body {
 	}
 	else if(strlen($_POST["password"])==0)
 	{
-		echo "Error: Password cannot be empty.<br>"
+		echo "Error: Password cannot be empty.<br>"; 
 	}
 	else if(strlen($_POST["cpassword"])==0)
 	{
-		echo "Error: Confirm Password cannot be empty.<br>"
+		echo "Error: Confirm Password cannot be empty.<br>";
 	}
     else if($_POST["password"]!=$_POST["cpassword"])
 	{
-		echo "Error: Passwords should match.<br>"
+		echo "Error: Passwords should match.<br>";
 	}
 	else
 	{
-		echo "Congratulations.<br>"
+		echo "Congratulations.<br>";
 
     }
+	}
 ?>
 </body>
-</html> 
+</html>
