@@ -13,14 +13,15 @@ body {
 </head>
 <body>
 <h1 style="color:white;"><center>Sign In</center></h1>
-<form style = "text-align:center;color:white;font-size:24px" method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
+<form style = "text-align:center;color:white;font-size:24px" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 	<br>
     Username:<br>
 	<input type="text" name="username" size="15">
-	<br>
+	<br><br>
     Password:<br>
 	<input type="password" name="password" size="15" maxlength="15">
 	<br>
+	
 	<input type = "submit" name = "signin" value = "Sign In">
 </form>
     <?php
@@ -36,41 +37,30 @@ body {
 	}
 	else
 	{
-		  
-    $link = mysqli_connect("localhost", "root", "", "project");
-
-    if($link === false){
-
-        die("ERROR: Could not connect. " . mysqli_connect_error());
-
+			$servername = "localhost";
+		$user = "root";
+		$password = "";
+		$dbname = "project";
+		$conn = new mysqli($servername, $user, $password, $dbname);
+		if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+		}
+		$check = mysqli_real_escape_string($conn, $_POST["username"]);
+		$password = mysqli_real_escape_string($conn, $_POST["password"]);
+		$sql = "SELECT * FROM users WHERE username = '$check' AND password = '$password'";
+		if($result = mysqli_query($conn, $sql))
+		{
+		if (mysqli_num_rows($result) > 0) {
+		header("Location: redirect.html");
+		//			echo "<center>Found you</center>";
+		} 
+		else
+		{
+			echo "<center>Sorry we couldn't find your record. Try Again.</center>";
+		}
     }
-
-     
-	else
-	{
-    $sql = "SELECT * FROM users WHERE username = ".$_POST["username"]." AND password = ".$_POST["password"];
-
-     if(mysqli_num_rows($result) > 0){
-
-			echo "Login successful.";
-			header("Location: index.php?msg={$msg}&size={$size}&fn={$filename}&target={$target}");
-			exit();
-            mysqli_free_result($result);
-
-        } else{
-
-            echo "No records matching your query were found.";
-
-        }
-
-    } 
-    mysqli_close($link);
-
     }
-
-
-    }
-	
+	}
 	?>
 </body>
 </html> 
