@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION["username"] = "";
+?>
 <!DOCTYPE html> 
 <html lang = "en">
 <head>
@@ -37,12 +41,13 @@ body {
 	}
 	else
 	{
-			$servername = "localhost";
+		$servername = "localhost";
 		$user = "root";
 		$password = "";
 		$dbname = "project";
 		$conn = new mysqli($servername, $user, $password, $dbname);
 		if ($conn->connect_error) {
+		session_destroy();
 		die("Connection failed: " . $conn->connect_error);
 		}
 		$check = mysqli_real_escape_string($conn, $_POST["username"]);
@@ -51,12 +56,17 @@ body {
 		if($result = mysqli_query($conn, $sql))
 		{
 		if (mysqli_num_rows($result) > 0) {
-		header("Location: redirect.html");
-		//			echo "<center>Found you</center>";
+		$_SESSION["username"] = $_POST["username"];
+		echo "<script>setTimeout(\"location.href = 'redirect.html';\",500);</script>;	
+		<script>
+			parent.head.location.href = \"header.php\";
+		</script>";
 		} 
 		else
 		{
 			echo "<center>Sorry we couldn't find your record. Try Again.</center>";
+			session_destroy();
+			echo "<script>\"location.href = 'signin.php';\"</script>";	
 		}
     }
     }

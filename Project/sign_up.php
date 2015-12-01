@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION["username"] = "";
+?>
 <!DOCTYPE html> 
 <html lang = "en">
 <head>
@@ -55,6 +59,7 @@ body {
 		$conn = new mysqli($servername, $user, $password, $dbname);
 		if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
+		session_destroy();
 		}
 		$check = mysqli_real_escape_string($conn, $_POST["username"]);
 		$sql = "SELECT * FROM users WHERE username = '$check'";
@@ -69,7 +74,8 @@ body {
 			$sql = "INSERT INTO users (Username,Password) VALUES ('$username', '$password')";
 			if(mysqli_query($conn, $sql)){
 				echo "<br><center>Congratulations! You are now a member of LingoPedia<br>Redirecting you</center>";
-				echo "<script>setTimeout(\"location.href = 'redirect.html';\",1500);</script>";
+				$_SESSION["username"] = $_POST["username"];
+				echo "<script>setTimeout(\"location.href = 'redirect.html';\",500);</script>";
 			} else{
 				echo "<center>Something went wrong. Try Again</center>" . mysqli_error($conn);
 			}
@@ -78,6 +84,8 @@ body {
 		else
 		{
 			echo "<center>Something went wrong.Try Again.</center>".mysqli_error($conn);
+			session_destroy();
+			echo "<script>\"location.href = 'signup.php';\"</script>";	
 		}
 $conn->close();		
     }
