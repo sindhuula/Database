@@ -22,7 +22,7 @@ CREATE TABLE LanguageCodes
 	LangID varchar(3) NOT NULL,
     CountryID varchar(2) NOT NULL,
     LangStatus varchar(1) NOT NULL,
-    Name varchar(50) NOT NULL,
+    Name varchar(65) NOT NULL,
     primary key(LangID),
     foreign key(CountryID) references CountryCodes(CountryID)
 );
@@ -39,7 +39,7 @@ CREATE TABLE LanguageIndex
 	LangID varchar(3) NOT NULL,
     CountryID varchar(2) NOT NULL,
     NameType varchar(3) NOT NULL,
-    Name varchar(50) NOT NULL,
+    Name varchar(65) NOT NULL,
     foreign key(CountryID) references CountryCodes(CountryID)
 );
 
@@ -54,4 +54,9 @@ CREATE TABLE Users
 (
 	Username Varchar(20),
     Password Varchar(20)
-)
+);
+
+INSERT INTO Users VALUES('Sindhuula','GeekGirl');
+INSERT INTO Users VALUES('Anchit','NerdBoyLovesBatman');
+INSERT INTO Users VALUES('dbadmin','DBAdmin');
+
