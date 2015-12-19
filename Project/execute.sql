@@ -8,7 +8,7 @@ CREATE TABLE CountryCodes
     Name varchar(40) NOT NULL,
     Area varchar(15) NOT NULL,
     primary key(CountryID)
-);
+	);
 
 LOAD DATA LOCAL INFILE 'C:/Users/Sindhuula/Desktop/Database/Project/ProjectData/CountryCodes.tab' 
 INTO TABLE CountryCodes
@@ -54,13 +54,13 @@ CREATE TABLE Users
 (
 	Username Varchar(20),
     Password Varchar(20)
-)
+);
 
-INSERT INTO users 
-VALUES('instructor','abc');
+INSERT INTO Users 
+VALUES('DBAdmin','dbadmin');
 
-INSERT INTO users 
-VALUES('sindhuula','geekgirl');
+INSERT INTO Users 
+VALUES('sindhuula','GeekGirl');
 
-INSERT INTO users 
-VALUES('anchit','batman');
+INSERT INTO Users 
+VALUES('Anchit','NerdBoyThinksIsBatman');
