@@ -55,3 +55,12 @@ CREATE TABLE Users
 	Username Varchar(20),
     Password Varchar(20)
 )
+
+INSERT INTO users 
+VALUES('instructor','abc');
+
+INSERT INTO users 
+VALUES('sindhuula','geekgirl');
+
+INSERT INTO users 
+VALUES('anchit','batman');
